@@ -13,9 +13,8 @@ use Illuminate\Support\Str;
 trait WebUploader
 {
     /**
-     * @param string      $extensions exp. gif,jpg,jpeg,bmp,png
-     * @param string|null $mimeTypes  exp. image/*
-     *
+     * @param  string  $extensions  exp. gif,jpg,jpeg,bmp,png
+     * @param  string|null  $mimeTypes  exp. image/*
      * @return $this
      */
     public function accept(string $extensions, string $mimeTypes = null)
@@ -32,8 +31,7 @@ trait WebUploader
     }
 
     /**
-     * @param bool $value
-     *
+     * @param  bool  $value
      * @return $this
      */
     public function chunked(bool $value = true)
@@ -44,8 +42,7 @@ trait WebUploader
     }
 
     /**
-     * @param int|null $size kb
-     *
+     * @param  int|null  $size  kb
      * @return $this
      */
     public function chunkSize(int $size)
@@ -58,8 +55,7 @@ trait WebUploader
     }
 
     /**
-     * @param int $size kb
-     *
+     * @param  int  $size  kb
      * @return $this
      */
     public function maxSize(int $size)
@@ -71,8 +67,7 @@ trait WebUploader
     }
 
     /**
-     * @param int $num
-     *
+     * @param  int  $num
      * @return $this
      */
     public function threads(int $num)
@@ -85,8 +80,7 @@ trait WebUploader
     /**
      * 设置上传接口.
      *
-     * @param string $server
-     *
+     * @param  string  $server
      * @return $this
      */
     public function url(string $server)
@@ -101,8 +95,7 @@ trait WebUploader
     /**
      * 禁止上传文件后自动更新字段值.
      *
-     * @param bool $value
-     *
+     * @param  bool  $value
      * @return $this
      */
     public function autoSave(bool $value = true)
@@ -115,8 +108,7 @@ trait WebUploader
     /**
      * 禁用前端删除功能.
      *
-     * @param bool $value
-     *
+     * @param  bool  $value
      * @return $this
      */
     public function removable(bool $value = true)
@@ -129,8 +121,7 @@ trait WebUploader
     /**
      * 设置图片删除地址.
      *
-     * @param string $server
-     *
+     * @param  string  $server
      * @return $this
      */
     public function deleteUrl(string $server)
@@ -143,8 +134,7 @@ trait WebUploader
     /**
      * 设置上传表单请求参数.
      *
-     * @param array $data
-     *
+     * @param  array  $data
      * @return $this
      */
     public function withFormData(array $data)
@@ -157,8 +147,7 @@ trait WebUploader
     /**
      * 设置删除图片请求参数.
      *
-     * @param array $data
-     *
+     * @param  array  $data
      * @return $this
      */
     public function withDeleteData(array $data)
@@ -171,8 +160,7 @@ trait WebUploader
     /**
      * 是否开启自动上传.
      *
-     * @param bool $value
-     *
+     * @param  bool  $value
      * @return $this
      */
     public function autoUpload(bool $value = true)
@@ -185,8 +173,7 @@ trait WebUploader
     /**
      * 是否开启图片压缩.
      *
-     * @param bool|array $compress
-     *
+     * @param  bool|array  $compress
      * @return $this
      */
     public function compress($compress = true)
@@ -199,8 +186,7 @@ trait WebUploader
     /**
      * 是否允许下载文件.
      *
-     * @param bool $value
-     *
+     * @param  bool  $value
      * @return $this
      */
     public function downloadable(bool $value = true)

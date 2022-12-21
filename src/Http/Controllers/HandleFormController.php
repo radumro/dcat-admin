@@ -59,11 +59,10 @@ class HandleFormController
     }
 
     /**
-     * @param Request $request
+     * @param  Request  $request
+     * @return Form
      *
      * @throws AdminException
-     *
-     * @return Form
      */
     protected function resolveForm(Request $request)
     {

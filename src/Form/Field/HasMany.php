@@ -79,7 +79,7 @@ class HasMany extends Field
      * Create a new HasMany field instance.
      *
      * @param $relationName
-     * @param array $arguments
+     * @param  array  $arguments
      */
     public function __construct($relationName, $arguments = [])
     {
@@ -107,8 +107,7 @@ class HasMany extends Field
     /**
      * Get validator for this field.
      *
-     * @param array $input
-     *
+     * @param  array  $input
      * @return bool|Validator
      */
     public function getValidator(array $input)
@@ -222,9 +221,8 @@ class HasMany extends Field
     /**
      * Format validation messages.
      *
-     * @param array $input
-     * @param array $messages
-     *
+     * @param  array  $input
+     * @param  array  $messages
      * @return array
      */
     protected function formatValidationMessages(array $input, array $messages)
@@ -244,10 +242,9 @@ class HasMany extends Field
     /**
      * Format validation attributes.
      *
-     * @param array  $input
-     * @param string $label
-     * @param string $column
-     *
+     * @param  array  $input
+     * @param  string  $label
+     * @param  string  $column
      * @return array
      */
     protected function formatValidationAttribute($input, $label, $column)
@@ -280,9 +277,8 @@ class HasMany extends Field
     /**
      * Reset input key for validation.
      *
-     * @param array $input
-     * @param array $column $column is the column name array set
-     *
+     * @param  array  $input
+     * @param  array  $column  $column is the column name array set
      * @return void.
      */
     protected function resetInputKey(array &$input, array $column)
@@ -344,8 +340,7 @@ class HasMany extends Field
     /**
      * Prepare input data for insert or update.
      *
-     * @param array $input
-     *
+     * @param  array  $input
      * @return array
      */
     protected function prepareInputValue($input)
@@ -360,8 +355,7 @@ class HasMany extends Field
     /**
      * Build a Nested form.
      *
-     * @param null     $key
-     *
+     * @param  null  $key
      * @return NestedForm
      */
     public function buildNestedForm($key = null)
@@ -394,7 +388,7 @@ class HasMany extends Field
     }
 
     /**
-     * @param string $relationKeyName
+     * @param  string  $relationKeyName
      */
     public function setRelationKeyName(?string $relationKeyName)
     {
@@ -406,8 +400,7 @@ class HasMany extends Field
     /**
      * Set view mode.
      *
-     * @param string $mode currently support `tab` mode.
-     *
+     * @param  string  $mode  currently support `tab` mode.
      * @return $this
      *
      * @author Edwin Hui
@@ -442,9 +435,9 @@ class HasMany extends Field
     /**
      * Build Nested form for related data.
      *
-     * @throws \Exception
-     *
      * @return array
+     *
+     * @throws \Exception
      */
     protected function buildRelatedForms()
     {
@@ -507,9 +500,9 @@ class HasMany extends Field
     /**
      * Render the `HasMany` field.
      *
-     * @throws \Exception
-     *
      * @return \Illuminate\View\View|string
+     *
+     * @throws \Exception
      */
     public function render()
     {
@@ -539,9 +532,9 @@ class HasMany extends Field
     /**
      * Render the `HasMany` field for table style.
      *
-     * @throws \Exception
-     *
      * @return mixed
+     *
+     * @throws \Exception
      */
     protected function renderTable()
     {
